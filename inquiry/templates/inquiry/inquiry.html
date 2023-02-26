@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h3>Inquiries to jlbun clinic</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="name">Name</label>
+    <h3>{{inquiry_obj.name}} 様</h3>
+
+    <label for="email">Email</label>
+    <h3>{{inquiry_obj.email}}</h3>
+
+    <label for="contact category">Contact Category</label>
+    <h3>{{inquiry_obj.contact_category}}</h3>
+
+    <label for="content of inquiry">Contents_Of Inquiry</label>
+    <h3>{{inquiry_obj.contents_of_inquiry}}</h3>
+</div>
+
+</body>
+</html>

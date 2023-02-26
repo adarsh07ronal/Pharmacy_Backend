@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+
+  web:
+    build: .
+    command: bash -c "python manage.py collectstatic --noinput && gunicorn pharmacy.wsgi:application --workers 3 --timeout 500 --bind 0.0.0.0:5000 --log-level debug"
+    volumes:
+      - .:/usr/src/pharmacy/
+      - staticfiles:/usr/src/pharmacy/collected_static/
+      - media:/usr/src/pharmacy/media
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    env_file:
+      - ./env.prod
+    networks:
+      - main
+  
+  redis:
+    image: redis:buster
+    volumes:
+      - /var/lib/redis/data/
+    networks:
+      - main
+
+volumes:
+  media:
+  staticfiles:
+
+networks:
+  main:

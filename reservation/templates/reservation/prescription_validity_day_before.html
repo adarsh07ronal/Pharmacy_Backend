@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>{{username}} 様</h1>
+    <p>
+      ご登録いただいた処方箋の有効日が明日になっております。
+      有効日をすぎると処方箋の再発行が必要となりますので、期日までに
+      処方箋の受取予約、および受取をおこなってください。
+    </p>
+    <p>処方箋受取予約は以下のアドレスから行っていただけます。</p>
+    <a href="{{receive_reservation_url}}">{{receive_reservation_url}}</a>
+    <p style="padding: 20px 0px">////////////</p>
+    <p>じぶん薬局運営事務局</p>
+    <p>住所：〒254-0014\n神奈川県平塚市四之宮1-4-13</p>
+    <p>E-mail：info@orthros.com</p>
+  </body>
+</html>

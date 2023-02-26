@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container">
+  <form action="">
+    <h5>じぶん薬局運営事務局です。</h5><br>
+    <h5>会員登録は正常に完了しました。</h5>
+    <h5>以下のアドレスからマイページにアクセスいただき、ログインしてください。</h5>
+    <p>
+        <h5>ログイン情報</h5>
+        <h5>メールアドレス：{{creds.email}}</h5>
+        <h5>パスワード：{{creds.password}}</h5>
+        
+        <h5>ログインURL</h5>
+        <h5><a href="https://pharma-company.netlify.app/">https://pharma-company.netlify.app/</a></h5>
+
+        <h5>マイページの情報を正しくご登録いただければ</h5>
+        <h5>より便利にサービスをご利用いただくことができます。</h5><br>
+
+        </h4>////////////</h4><br>        
+        </h4>じぶん薬局運営事務局</h4><br>
+        </h4>住所: 〒254-0014\n神奈川県平塚市四之宮1-4-13</h4><br>
+        </h4>E-mail: info@orthros.com</h4><br>
+    </p>
+  </form>
+</div>
+
+</body>
+</html>

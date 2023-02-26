@@ -1,0 +1,3 @@
+paddlepaddle==2.3.0
+paddleocr
+protobuf==3.20.0

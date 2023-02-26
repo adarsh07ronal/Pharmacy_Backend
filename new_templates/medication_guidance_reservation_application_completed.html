@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>{{username}} 様</h1>
+    <p>
+      遠隔服薬指導の予約申請をおこないました。
+      以下の日程となりますので、お忘れのないようにお願いいたします。
+    </p>
+    <p>{{remote_medicine_guidance_implementation_date}}</p>
+    <a href="{{password_link}}">{{password_link}}</a>
+    <p>
+      なお、申請いただいた日程は、確定ではありません。
+      {{family_pharmacy}}にて確認の上、承諾があり次第確定となります。
+    </p>
+    <p>
+      申請いただいた日程での実施ができない場合、修正依頼が届きますので、
+      お手数ですが再設定をお願いいたします。
+    </p>
+    <p style="padding: 20px 0px">////////////</p>
+    <p>じぶん薬局運営事務局</p>
+    <p>住所：〒254-0014\n神奈川県平塚市四之宮1-4-13</p>
+    <p>E-mail：info@orthros.com</p>
+  </body>
+</html>

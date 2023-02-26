@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h5>{{instance.username}} 様</h5>
+    <h5>じぶん薬局運営事務局からメッセージが届いています。</h5>
+    <h5>お手数ですが、以下のURLからサイトにアクセスいただき、メッセージを確認して</h5>
+    <h5>いただけますよう、よろしくお願いいたします。</h5>
+    {% if instance.is_patient %}
+      <a href="https://pharmacy-user.netlify.app/mypage/news">https://pharmacy-user.netlify.app/mypage/news</a>
+    {% else %}
+      <a href="https://pharma-company.netlify.app/mypage">https://pharma-company.netlify.app/mypage</a>
+    {% endif %}
+    <h5>////////////</h5>    
+    <h5>じぶん薬局運営事務局</h5>
+    <h5>住所：〒254-0014\n神奈川県平塚市四之宮1-4-13</h5>
+    <h5></h5>
+    <h5>E-mail：info@orthros.com</h5>
+  </body>
+</html>
